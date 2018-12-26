@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lib_pub_color_trans"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="@dimen/lib_pub_dimen_dialog_width"
+        android:layout_height="wrap_content"
+        android:background="@color/lib_pub_color_white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="@dimen/lib_pub_dimen_margin"
+            android:gravity="center"
+            android:text="@string/module_common_new_song_list"
+            android:textColor="@color/lib_pub_color_black"
+            android:textSize="@dimen/lib_pub_dimen_text_main" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lib_pub_color_trans"
+            android:hint="@string/module_common_up_to_40_characters"
+            android:padding="@dimen/lib_pub_dimen_margin"
+            android:textColor="@color/lib_pub_color_black"
+            android:textSize="@dimen/lib_pub_dimen_text_sub" />
+
+        <include layout="@layout/lib_pub_layout_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_ok"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:alpha="0.5"
+                android:background="@color/lib_pub_color_trans"
+                android:gravity="center"
+                android:padding="6dp"
+                android:text="@string/lib_pub_ok"
+                android:textColor="@color/lib_pub_color_main"
+                android:textSize="@dimen/lib_pub_dimen_text_sub"
+                skin:enable="true" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/lib_pub_color_line" />
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/lib_pub_color_trans"
+                android:gravity="center"
+                android:padding="6dp"
+                android:text="@string/lib_pub_cancel"
+                android:textColor="@color/lib_pub_color_main"
+                android:textSize="@dimen/lib_pub_dimen_text_sub"
+                skin:enable="true" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

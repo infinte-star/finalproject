@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/lib_pub_color_bg_sub"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_mv_info_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/lib_pub_dimen_margin"
+        android:layout_marginRight="@dimen/lib_pub_dimen_margin"
+        android:layout_marginTop="@dimen/lib_pub_dimen_margin"
+        android:text="Song"
+        android:textColor="@color/lib_pub_color_text_main"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_mv_info_singer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/lib_pub_dimen_margin"
+        android:layout_marginRight="@dimen/lib_pub_dimen_margin"
+        android:layout_marginTop="3dp"
+        android:text="Singer"
+        android:textColor="@color/lib_pub_color_text_sub"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/tv_mv_info_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/lib_pub_dimen_margin"
+        android:layout_marginRight="@dimen/lib_pub_dimen_margin"
+        android:layout_marginTop="2dp"
+        android:text="2018-08-12    2259"
+        android:textColor="@color/lib_pub_color_text_sub"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/tv_mv_info_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/lib_pub_dimen_margin"
+        android:layout_marginRight="@dimen/lib_pub_dimen_margin"
+        android:layout_marginTop="6dp"
+        android:lineSpacingExtra="3dp"
+        android:text="Content"
+        android:textColor="@color/lib_pub_color_text_sub"
+        android:textSize="12dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:orientation="horizontal"
+        android:paddingBottom="6dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/module_online_ic_mv_info_like" />
+
+            <TextView
+                android:id="@+id/tv_mv_info_like_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="0"
+                android:textColor="@color/lib_pub_color_text_sub"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llyt_mv_info_sub_count"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/module_online_ic_mv_info_download" />
+
+            <TextView
+                android:id="@+id/tv_mv_info_sub_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="0"
+                android:textColor="@color/lib_pub_color_text_sub"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/module_online_ic_mv_info_comment" />
+
+            <TextView
+                android:id="@+id/tv_mv_info_comment_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="0"
+                android:textColor="@color/lib_pub_color_text_sub"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/module_online_ic_mv_info_share" />
+
+            <TextView
+                android:id="@+id/tv_mv_info_share_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="0"
+                android:textColor="@color/lib_pub_color_text_sub"
+                android:textSize="12dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/lib_pub_color_line" />
+</LinearLayout>

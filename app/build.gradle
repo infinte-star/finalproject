@@ -1,0 +1,82 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.d.music"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        vectorDrawables.useSupportLibrary = true
+        ndk {
+            // 选择要添加的对应cpu类型的.so库
+            abiFilters "armeabi", "armeabi-v7a", "x86"
+        }
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('../key/key')
+            keyAlias 'dsiner'
+            keyPassword '123456'
+            storePassword '123456'
+        }
+        debug {
+            storeFile file('../key/key')
+            keyAlias 'dsiner'
+            keyPassword '123456'
+            storePassword '123456'
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+        release {
+            // 混淆
+            minifyEnabled true
+            // ZipAlign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    implementation project(':lib_common')
+    implementation project(':lib_commenplayer')
+
+    implementation rootProject.ext.dependencies.support_v4
+    implementation rootProject.ext.dependencies.support_appcompat_v7
+    implementation rootProject.ext.dependencies.support_percent
+    implementation rootProject.ext.dependencies.support_constraint_layout
+
+    implementation rootProject.ext.dependencies.eventbus
+    implementation rootProject.ext.dependencies.greendao
+    implementation rootProject.ext.dependencies.tinypinyin
+    annotationProcessor rootProject.ext.dependencies.butterknife_compiler
+    annotationProcessor rootProject.ext.dependencies.glide_compiler
+
+    implementation rootProject.ext.dependencies.slidelayout
+}

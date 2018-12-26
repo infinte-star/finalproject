@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lib_pub_color_translucent"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@color/lib_pub_color_main"
+        android:orientation="vertical"
+        skin:enable="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lib_pub_dimen_item_height"
+            android:gravity="center"
+            android:text="@string/module_common_song_info"
+            android:textColor="@color/lib_pub_color_white"
+            android:textSize="@dimen/lib_pub_dimen_text_main" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lib_pub_color_white" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="12dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="9dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="76dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/module_common_song_info_song"
+                        android:textColor="@color/lib_pub_color_white"
+                        android:textSize="16.5dp" />
+
+                    <TextView
+                        android:id="@+id/tv_song_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:text="Song"
+                        android:textColor="@color/lib_pub_color_white"
+                        android:textSize="16.5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="76dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/module_common_song_info_singer"
+                        android:textColor="@color/lib_pub_color_white"
+                        android:textSize="16.5dp" />
+
+                    <TextView
+                        android:id="@+id/tv_singer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/lib_pub_dimen_margin"
+                        android:layout_weight="1"
+                        android:text="Singer"
+                        android:textColor="@color/lib_pub_color_white"
+                        android:textSize="16.5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="76dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/module_common_song_info_album"
+                        android:textColor="@color/lib_pub_color_white"
+                        android:textSize="16.5dp" />
+
+                    <TextView
+                        android:id="@+id/tv_album"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/lib_pub_dimen_margin"
+                        android:layout_weight="1"
+                        android:text="Album"
+                        android:textColor="@color/lib_pub_color_white"
+                        android:textSize="16.5dp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="76dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/module_common_song_info_file_postfix"
+                        android:textColor="@color/lib_pub_color_white"
+                        android:textSize="16.5dp" />
+
+                    <TextView
+                        android:id="@+id/tv_filepostfix"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/lib_pub_dimen_margin"
+                        android:layout_weight="1"
+                        android:text="mp3"
+                        android:textColor="@color/lib_pub_color_white"
+                        android:textSize="16.5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="76dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/module_common_song_info_file_duration"
+                        android:textColor="@color/lib_pub_color_white"
+                        android:textSize="16.5dp" />
+
+                    <TextView
+                        android:id="@+id/tv_duration"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/lib_pub_dimen_margin"
+                        android:layout_weight="1"
+                        android:text="00:00"
+                        android:textColor="@color/lib_pub_color_white"
+                        android:textSize="16.5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="76dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/module_common_song_info_file_size"
+                        android:textColor="@color/lib_pub_color_white"
+                        android:textSize="16.5dp" />
+
+                    <TextView
+                        android:id="@+id/tv_size"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/lib_pub_dimen_margin"
+                        android:layout_weight="1"
+                        android:text="0.00MB"
+                        android:textColor="@color/lib_pub_color_white"
+                        android:textSize="16.5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="76dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/module_common_song_info_file_folder"
+                        android:textColor="@color/lib_pub_color_white"
+                        android:textSize="16.5dp" />
+
+                    <TextView
+                        android:id="@+id/tv_url"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/lib_pub_dimen_margin"
+                        android:layout_weight="1"
+                        android:text="/storage/emulated/0/song.mp3"
+                        android:textColor="@color/lib_pub_color_white"
+                        android:textSize="16.5dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/tv_ok"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lib_pub_dimen_item_height"
+            android:background="@color/lib_pub_color_white"
+            android:gravity="center"
+            android:text="@string/lib_pub_ok"
+            android:textColor="@color/lib_pub_color_main"
+            android:textSize="@dimen/lib_pub_dimen_text_sub"
+            skin:enable="true" />
+    </LinearLayout>
+</RelativeLayout>

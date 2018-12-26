@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lib_pub_color_bg_main">
+
+    <com.d.lib.common.view.DSLayout
+        android:id="@+id/dsl_ds"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tl_title" />
+
+    <com.d.lib.xrv.XRecyclerView
+        android:id="@+id/xrv_list"
+        style="@style/listview_style"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.d.music.view.sort.SideBar
+        android:id="@+id/sb_sidebar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+</FrameLayout>

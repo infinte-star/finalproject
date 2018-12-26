@@ -1,0 +1,24 @@
+package com.d.lib.common.data.preference.operation;
+
+import android.content.SharedPreferences;
+
+/**
+ * Abstract Operation
+ */
+public abstract class AbstractOp {
+    protected SharedPreferences settings;
+    protected SharedPreferences.Editor editor;
+
+    public AbstractOp(SharedPreferences settings, SharedPreferences.Editor editor) {
+        this.settings = settings;
+        this.editor = editor;
+    }
+
+    protected void save() {
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.GINGERBREAD) {
+            editor.apply();
+        } else {
+            editor.commit();
+        }
+    }
+}

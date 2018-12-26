@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LrcView">
+        <attr name="lrcTextColor" format="color" />
+        <attr name="lrcCurTextColor" format="color" />
+        <attr name="lrcTimeColor" format="color" />
+        <attr name="lrcTextSize" format="dimension" />
+        <attr name="lrcCurTextSize" format="dimension" />
+        <attr name="lrcTimeSize" format="dimension" />
+        <attr name="lrcPadding" format="dimension" />
+        <attr name="lrcMinScale" format="float" />
+        <attr name="lrcMaxScale" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="FlowLayout">
+        <attr name="flow_padding" format="dimension" />
+        <attr name="flow_paddingLeft" format="dimension" />
+        <attr name="flow_paddingTop" format="dimension" />
+        <attr name="flow_paddingRight" format="dimension" />
+        <attr name="flow_paddingBottom" format="dimension" />
+        <attr name="flow_dividerWidth" format="dimension" />
+        <attr name="flow_dividerHeight" format="dimension" />
+    </declare-styleable>
+</resources>

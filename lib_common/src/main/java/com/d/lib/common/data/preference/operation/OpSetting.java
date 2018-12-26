@@ -1,0 +1,25 @@
+package com.d.lib.common.data.preference.operation;
+
+import android.content.SharedPreferences;
+
+import com.d.lib.common.data.preference.Keys;
+
+/**
+ * Setting Operation
+ */
+public class OpSetting extends AbstractOp {
+
+    public OpSetting(SharedPreferences settings, SharedPreferences.Editor editor) {
+        super(settings, editor);
+    }
+
+    /************************* 是/否 自动升级 *************************/
+    public void putIsAutoUpdate(boolean auto) {
+        editor.putBoolean(Keys.KEY_IS_AUTO_UPDATE, auto);
+        save();
+    }
+
+    public boolean getIsAutoUpdate() {
+        return settings.getBoolean(Keys.KEY_IS_AUTO_UPDATE, false);
+    }
+}

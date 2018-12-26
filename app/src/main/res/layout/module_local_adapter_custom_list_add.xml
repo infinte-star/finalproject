@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginLeft="@dimen/lib_pub_dimen_margin"
+        android:layout_marginRight="@dimen/lib_pub_dimen_margin"
+        android:gravity="center"
+        android:text="+"
+        android:textColor="@color/lib_pub_color_main"
+        android:textSize="40dp"
+        skin:enable="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.5"
+        android:text="@string/module_common_new_song_list"
+        android:textColor="@color/lib_pub_color_black"
+        android:textSize="@dimen/lib_pub_dimen_text_sub" />
+</LinearLayout>
